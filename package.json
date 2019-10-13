@@ -1,0 +1,108 @@
+{
+	"name": "itranslate",
+	"displayName": "itranslate",
+	"description": "vscode translate",
+	"version": "1.0.0",
+	"publisher": "xshrim",
+	"icon": "images/icon.png",
+	"author": {
+		"name": "xshrim",
+		"email": "xshrim@gmail.com"
+	},
+	"engines": {
+		"vscode": "^1.2.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./src/extension.js",
+	"repository": "https://github.com/xshrim/vscode-itranslate.git",
+	"contributes": {
+		"commands": [{
+				"command": "iTranslate.select",
+				"title": "选择翻译服务",
+				"category": "iTranslate"
+			},
+			{
+				"command": "iTranslate.selectReplace",
+				"title": "替换翻译内容",
+				"category": "iTranslate"
+			},
+			{
+				"command": "iTranslate.selectReplaceFormat",
+				"title": "替换成驼峰格式",
+				"category": "iTranslate"
+			}
+		],
+		"keybindings": [{
+				"command": "iTranslate.selectReplace",
+				"key": "ctrl+alt+r",
+				"mac": "ctrl+cmd+r"
+			},
+			{
+				"command": "iTranslate.selectReplaceFormat",
+				"key": "ctrl+alt+shift+r",
+				"mac": "ctrl+cmd+shift+r"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "xshrim translate",
+			"properties": {
+				"iTranslate.proxy": {
+					"type": "string",
+					"default": null,
+					"markdownDescription": "添加代理"
+				},
+				"iTranslate.hover": {
+					"type": "boolean",
+					"default": false,
+					"description": "开启悬停取词"
+				},
+				"iTranslate.verbose": {
+					"type": "boolean",
+					"default": false,
+					"description": "显示详细翻译结果"
+				},
+				"iTranslate.translateServes": {
+					"type": "string",
+					"enum": [
+						"google",
+						"youdao",
+						"baidu"
+					],
+					"enumDescriptions": [
+						"谷歌",
+						"有道",
+						"百度"
+					],
+					"description": "翻译服务提供商"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.2.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"change-case": "^3.1.0",
+		"humanize-string": "^2.1.0",
+		"translation-api": "^1.0.5",
+		"vscode-languageclient": "^5.2.1",
+		"vscode-languageserver": "^5.2.1"
+	}
+}
