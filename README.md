@@ -6,45 +6,13 @@
 
 ## 特点
 
-* 划词翻译
+* 支持英汉汉英离线词典和在线翻译
+* 离线翻译和在线翻译自定义优先级
+* 支持划词翻译
 * 悬停取词开关
-* 音标显示(百度)
-* 翻译结果简祥可选
+* 音标显示(离线/百度)
+* 翻译结果简详可选
 * 翻译语言自动检测
-* 谷歌有道百度多服务商支持
+* 谷歌有道百度微软多服务商支持
 * 支持驼峰命名单词翻译
-* 翻译替换
-
-## 演示
-
-* 划词翻译
-
-![划词翻译](https://github.com/xshrim/vscode-itranslate/raw/master/./images/demo/show1.gif)
-
-* 翻译替换
-
-![翻译替换](https://github.com/xshrim/vscode-itranslate/raw/master/./images/demo/show2.gif)
-
-## 使用
-
-* 翻译替换 `ctrl + alt + r`（mac: `ctrl + cmd  + r`）
-
-```js
-// 关闭按钮
-=> close button
-```
-
-* 翻译替换成驼峰 `ctrl + alt + shift + r` （mac: `ctrl + cmd + shift + r`）(只支持中文翻译成英文)
-
-```js
-// 关闭按钮
-=> closeButton
-```
-
-## 设置
-
-`ctrl + alt + p` （mac: `cmd + shift + p`） 输入 iTranslate 可以切换翻译服务商 google, 有道, 百度
-
-![设置](https://github.com/xshrim/vscode-itranslate/raw/master/./images/demo/setting.jpg)
-
-![设置](https://github.com/xshrim/vscode-itranslate/raw/master/./images/demo/settings.png)
+* 翻译替换(在线)
